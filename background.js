@@ -1,20 +1,24 @@
 'use strict';
 
 (function () {
-  // See https://www.instagram.com/z_e_b_u/
+  // See http://www.z-e-b-u.com/paintings.html
   var ZEBU_COLORS = [
+    { r: 248, g: 248, b: 250 }, // white
+    { r: 248, g: 243, b: 82 }, // yellow
+    { r: 237, g: 111, b: 2 }, // orange
     { r: 235, g: 55, b: 40 }, // red
-    { r: 29, g: 26, b: 29 }, // black
+    { r: 247, g: 146, b: 155 }, // pink
+    { r: 171, g: 120, b: 178 }, // purple
     { r: 32, g: 64, b: 177 }, // blue
+    { r: 196, g: 198, b: 246 }, // light blue
+    { r: 63, g: 185, b: 187 }, // sky blue
     { r: 149, g: 152, b: 159 }, // grey
     { r: 56, g: 100, b: 68 }, // green
-    { r: 248, g: 243, b: 82 }, // yellow
-    { r: 248, g: 248, b: 250 }, // white
-    { r: 247, g: 146, b: 155 }, // pink
-    { r: 124, g: 68, b: 66 }, // brown
-    { r: 196, g: 198, b: 246 }, // light_blue
-    { r: 171, g: 120, b: 178 }, // purple
     { r: 112, g: 128, b: 109 }, // olive
+    { r: 156, g: 183, b: 156 }, // light green
+    { r: 124, g: 68, b: 66 }, // brown
+    { r: 225, g: 200, b: 179 }, // dove
+    { r: 29, g: 26, b: 29 }, // black
   ];
   var SVG = document.getElementById('bg');
 
