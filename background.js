@@ -1,6 +1,20 @@
 'use strict';
 
 (function () {
+  var ZEBU_COLORS = [
+    { r: 235, g: 55, b: 40 }, // red
+    { r: 29, g: 26, b: 29 }, // black
+    { r: 32, g: 64, b: 177 }, // blue
+    { r: 149, g: 152, b: 159 }, // grey
+    { r: 56, g: 100, b: 68 }, // green
+    { r: 248, g: 243, b: 82 }, // yellow
+    { r: 248, g: 248, b: 250 }, // white
+    { r: 247, g: 146, b: 155 }, // pink
+    { r: 124, g: 68, b: 66 }, // brown
+    { r: 196, g: 198, b: 246 }, // light_blue
+    { r: 171, g: 120, b: 178 }, // purple
+    { r: 112, g: 128, b: 109 }, // olive
+  ];
   var SVG = document.getElementById('bg');
 
   function randInt(upper) {
@@ -8,8 +22,12 @@
   };
 
   function randColor() {
-    return colorString(randInt(256), randInt(256), randInt(256));
-  };
+    return { r: randInt(256), g: randInt(256), b: randInt(256) };
+  }
+
+  function sample(array) {
+    return array[randInt(array.length)];
+  }
 
   function colorString(c) {
     return 'rgb(' + c.r + ', ' + c.g + ', ' + c.b + ')';
@@ -32,7 +50,7 @@
     var maxContrast = -1;
     var color, colorRL, l1, l2, contrast, bestColor;
     while (c > 0) {
-      color = { r: randInt(256), g: randInt(256), b: randInt(256) };
+      color = sample(ZEBU_COLORS);
       colorRL = relativeLuminance(color);
       // See https://www.w3.org/TR/WCAG20/#contrast-ratiodef
       l1 = Math.max(backgroundColorRL, colorRL);
@@ -50,7 +68,7 @@
     return bestColor;
   }
 
-  var backgroundColor = { r: randInt(256), g: randInt(256), b: randInt(256) };
+  var backgroundColor = sample(ZEBU_COLORS);
   var textColor = findHighContrastColor(backgroundColor);
   var linkColor = findHighContrastColor(backgroundColor);
   document.body.style.color = colorString(textColor);

@@ -31,9 +31,8 @@ html {
 }
 
 #title {
-  font-family: "Helvetica Neue", Helvetica, sans-serif;
-  font-size: 3rem;
-  letter-spacing: 0.5rem;
+  margin-top: 0;
+  font-size: 6rem;
 }
 
 #container {
