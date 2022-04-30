@@ -1,6 +1,7 @@
 'use strict';
 
 (function () {
+  // See https://www.instagram.com/z_e_b_u/
   var ZEBU_COLORS = [
     { r: 235, g: 55, b: 40 }, // red
     { r: 29, g: 26, b: 29 }, // black
