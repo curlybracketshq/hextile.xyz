@@ -1,0 +1,41 @@
+body,
+html {
+  margin: 0;
+  font-family: Helvetica, sans-serif;
+}
+
+#bg-container {
+  z-index: -1;
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+}
+
+#bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  min-width: 50%;
+  min-height: 50%;
+}
+
+#title,
+#subtitle {
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+#title {
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 3rem;
+  letter-spacing: 0.5rem;
+}
+
+#container {
+  margin: 20px;
+}
